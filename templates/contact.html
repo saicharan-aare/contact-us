@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - QuantumQuill</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="brand">QuantumQuill</div>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Contact Us</h1>
+        
+        <!-- Contact Details -->
+        <section class="contact-details">
+            <h2>Contact Details</h2>
+            <p><strong>Email:</strong> support@quantumquill.com</p>
+            <p><strong>Phone:</strong> +1-800-QUILL</p>
+            <p><strong>Address:</strong> 123 Creativity Lane, Inspiration City, Imagineland</p>
+        </section>
+        
+        <!-- Social Links -->
+        <section class="social-links">
+            <h2>Follow Us</h2>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" class="social facebook">Facebook</a>
+                <a href="https://twitter.com" target="_blank" class="social twitter">Twitter</a>
+                <a href="https://instagram.com" target="_blank" class="social instagram">Instagram</a>
+            </div>
+        </section>
+        
+        <!-- Registration Form -->
+        <section class="form-section">
+            <h2>Register</h2>
+            <form method="POST" action="{{ url_for('contact') }}">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        
+        <!-- Map -->
+        <section class="map-section">
+            <h2>Our Location</h2>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509243!2d144.9560543156853!3d-37.81720997975185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577e3e1e9307d67!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1699834869118!5m2!1sen!2sau"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
